@@ -71,6 +71,16 @@ jobs:
       with:
         name: termux-x11-unstripped-libraries-for-ndk-stack
         path: ./app/build/intermediates/cxx/Debug/*
+        
+    - name: create Backup
+      run: tar -czf ./backup.tar.gz ./app/*
+
+    - name: Store Backup
+      uses: actions/upload-artifact@v7
+      with:
+        name: Project_backup
+        path: ./backup.tar.gz
+      
 
     - name: Update Nightly Release
       uses: andelf/nightly-release@main
