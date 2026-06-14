@@ -1,4 +1,4 @@
-package com.termux.x11;
+package com.pydroid.x11;
 
 import static android.Manifest.permission.POST_NOTIFICATIONS;
 import static android.Manifest.permission.WRITE_SECURE_SETTINGS;
@@ -61,9 +61,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.termux.x11.utils.KeyInterceptor;
-import com.termux.x11.utils.SamsungDexUtils;
-import com.termux.x11.utils.TermuxX11ExtraKeys;
+import com.pydroid.x11.utils.KeyInterceptor;
+import com.pydroid.x11.utils.SamsungDexUtils;
+import com.pydroid.x11.utils.TermuxX11ExtraKeys;
 
 import java.io.StringWriter;
 import java.io.PrintWriter;
@@ -79,7 +79,7 @@ import java.util.regex.PatternSyntaxException;
 
 @SuppressWarnings("deprecation")
 public class LoriePreferences extends AppCompatActivity implements PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
-    static final String ACTION_PREFERENCES_CHANGED = "com.termux.x11.ACTION_PREFERENCES_CHANGED";
+    static final String ACTION_PREFERENCES_CHANGED = "com.pydroid.x11.ACTION_PREFERENCES_CHANGED";
     private static Prefs prefs = null;
 
     private final BroadcastReceiver receiver = new BroadcastReceiver() {
@@ -440,7 +440,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                             .setTitle("Permission denied")
                             .setMessage("Android requires WRITE_SECURE_SETTINGS permission to start accessibility service automatically.\n" +
                                     "Please, launch this command using ADB:\n" +
-                                    "adb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS")
+                                    "adb shell pm grant com.pydroid.x11 android.permission.WRITE_SECURE_SETTINGS")
                             .setNegativeButton("OK", null)
                             .create()
                             .show();
@@ -451,7 +451,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
             requireContext().sendBroadcast(new Intent(ACTION_PREFERENCES_CHANGED) {{
                 putExtra("key", key);
                 putExtra("fromBroadcast", true);
-                setPackage("com.termux.x11");
+                setPackage("com.pydroid.x11");
             }});
 
             return true;
@@ -563,7 +563,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                                     sendResponse(remote, 1, 1, "Permission denied.\n" +
                                             "Android requires WRITE_SECURE_SETTINGS permission to change `enableAccessibilityServiceAutomatically` setting.\n" +
                                             "Please, launch this command using ADB:\n" +
-                                            "adb shell pm grant com.termux.x11 android.permission.WRITE_SECURE_SETTINGS");
+                                            "adb shell pm grant com.pydroid.x11 android.permission.WRITE_SECURE_SETTINGS");
                                     return;
                                 }
 
@@ -613,7 +613,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
                         Intent intent0 = new Intent(ACTION_PREFERENCES_CHANGED);
                         intent0.putExtra("key", key);
                         intent0.putExtra("fromBroadcast", true);
-                        intent0.setPackage("com.termux.x11");
+                        intent0.setPackage("com.pydroid.x11");
                         context.sendBroadcast(intent0);
                     }
                     edit.commit();
@@ -658,13 +658,13 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
             android.util.Log.i("LoriePreferences$Receiver", "commit " + BuildConfig.COMMIT);
             //noinspection resource
             ParcelFileDescriptor in = ParcelFileDescriptor.adoptFd(0);
-            Intent i = new Intent("com.termux.x11.CHANGE_PREFERENCE");
+            Intent i = new Intent("com.pydroid.x11.CHANGE_PREFERENCE");
             Bundle bundle = new Bundle();
             boolean inputIsFile = !android.system.Os.isatty(in.getFileDescriptor());
 
             in.detachFd();
             bundle.putBinder(null, iface);
-            i.setPackage("com.termux.x11");
+            i.setPackage("com.pydroid.x11");
             i.putExtra(null, bundle);
             if (getuid() == 0 || getuid() == 2000)
                 i.setFlags(0x00400000 /* FLAG_RECEIVER_FROM_SHELL */);

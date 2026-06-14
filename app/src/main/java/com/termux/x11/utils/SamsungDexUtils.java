@@ -1,4 +1,4 @@
-package com.termux.x11.utils;
+package com.pydroid.x11.utils;
 
 import android.app.Activity;
 import android.content.Context;

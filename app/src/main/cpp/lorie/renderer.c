@@ -300,7 +300,7 @@ void rendererInit(JNIEnv* env) {
         return;
 
     (*env)->GetJavaVM(env, &vm);
-    jclass clazz = (*env)->FindClass(env, "com/termux/x11/LorieView");
+    jclass clazz = (*env)->FindClass(env, "com/pydroid/x11/LorieView");
     lorieViewClass = (*env)->NewGlobalRef(env, clazz);
     setRendererViewportMethod = (*env)->GetStaticMethodID(env, lorieViewClass, "setRendererViewport", "(IIIIFFFF)V");
 

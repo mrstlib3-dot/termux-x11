@@ -1,4 +1,4 @@
-package com.termux.shared.termux.extrakeys;
+package com.pydroid.shared.termux.extrakeys;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -36,8 +36,8 @@ import android.widget.PopupWindow;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.termux.x11.R;
-import com.termux.x11.utils.TermuxX11ExtraKeys;
+import com.pydroid.x11.R;
+import com.pydroid.x11.utils.TermuxX11ExtraKeys;
 
 /**
  * A {@link View} showing extra keys (such as Escape, Ctrl, Alt) not normally available on an Android soft
@@ -47,7 +47,7 @@ import com.termux.x11.utils.TermuxX11ExtraKeys;
  * it with a {@link androidx.viewpager.widget.ViewPager}.:
  * {@code
  * <?xml version="1.0" encoding="utf-8"?>
- * <com.termux.shared.termux.extrakeys.ExtraKeysView xmlns:android="http://schemas.android.com/apk/res/android"
+ * <com.pydroid.shared.termux.extrakeys.ExtraKeysView xmlns:android="http://schemas.android.com/apk/res/android"
  *     android:id="@+id/extra_keys"
  *     style="?android:attr/buttonBarStyle"
  *     android:layout_width="match_parent"
@@ -73,7 +73,7 @@ import com.termux.x11.utils.TermuxX11ExtraKeys;
  * The {@link ExtraKeysInfo} is created by TermuxAppSharedProperties.setExtraKeys().
  * Then its got and the view height is adjusted in TermuxActivity.setTerminalToolbarHeight().
  * The client used is TermuxTerminalExtraKeys, which extends
- * {@link com.termux.x11.utils.TermuxX11ExtraKeys } to handle Termux app specific logic and
+ * {@link com.pydroid.x11.utils.TermuxX11ExtraKeys } to handle Termux app specific logic and
  * leave the rest to the super class.
  */
 public final class ExtraKeysView extends GridLayout {

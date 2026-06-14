@@ -1,4 +1,4 @@
-package com.termux.shared.termux.extrakeys;
+package com.pydroid.shared.termux.extrakeys;
 
 import android.text.TextUtils;
 

@@ -1,4 +1,4 @@
-package com.termux.x11;
+package com.pydroid.x11;
 
 import android.content.Context;
 import android.util.AttributeSet;

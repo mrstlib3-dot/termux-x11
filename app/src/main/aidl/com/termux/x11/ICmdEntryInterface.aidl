@@ -1,4 +1,4 @@
-package com.termux.x11;
+package com.pydroid.x11;
 
 // This interface is used by utility on termux side.
 interface ICmdEntryInterface {

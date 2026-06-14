@@ -2,19 +2,19 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-package com.termux.x11.input;
+package com.pydroid.x11.input;
 
 import static android.view.KeyEvent.*;
 import static android.view.MotionEvent.*;
 import static androidx.core.math.MathUtils.clamp;
-import static com.termux.x11.input.InputStub.*;
+import static com.pydroid.x11.input.InputStub.*;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import android.graphics.PointF;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 
-import com.termux.x11.MainActivity;
+import com.pydroid.x11.MainActivity;
 
 import java.util.List;
 import java.util.TreeSet;

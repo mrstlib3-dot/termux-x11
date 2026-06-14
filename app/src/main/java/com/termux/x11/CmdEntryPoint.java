@@ -1,4 +1,4 @@
-package com.termux.x11;
+package com.pydroid.x11;
 
 import static android.system.Os.getuid;
 import static android.system.Os.getenv;
@@ -29,7 +29,7 @@ import java.net.URL;
 
 @Keep @SuppressLint({"StaticFieldLeak", "UnsafeDynamicallyLoadedCode"})
 public class CmdEntryPoint extends ICmdEntryInterface.Stub {
-    public static final String ACTION_START = "com.termux.x11.CmdEntryPoint.ACTION_START";
+    public static final String ACTION_START = "com.pydroid.x11.CmdEntryPoint.ACTION_START";
     static final Handler handler;
     public static Context ctx;
     private final Intent intent = createIntent();
@@ -57,7 +57,7 @@ public class CmdEntryPoint extends ICmdEntryInterface.Stub {
     private Intent createIntent() {
         String targetPackage = getenv("TERMUX_X11_OVERRIDE_PACKAGE");
         if (targetPackage == null)
-            targetPackage = "com.termux.x11";
+            targetPackage = "com.pydroid.x11";
         // We should not care about multiple instances, it should be called only by `Termux:X11` app
         // which is single instance...
         Bundle bundle = new Bundle();

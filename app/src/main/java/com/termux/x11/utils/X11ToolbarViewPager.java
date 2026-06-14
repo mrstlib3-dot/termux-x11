@@ -1,4 +1,4 @@
-package com.termux.x11.utils;
+package com.pydroid.x11.utils;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
@@ -17,9 +17,9 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.termux.shared.termux.extrakeys.ExtraKeysView;
-import com.termux.x11.MainActivity;
-import com.termux.x11.R;
+import com.pydroid.shared.termux.extrakeys.ExtraKeysView;
+import com.pydroid.x11.MainActivity;
+import com.pydroid.x11.R;
 
 public class X11ToolbarViewPager {
     public static class PageAdapter extends PagerAdapter {

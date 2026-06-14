@@ -1,12 +1,12 @@
-package com.termux.x11;
+package com.pydroid.x11;
 
 import static android.Manifest.permission.WRITE_SECURE_SETTINGS;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.os.Build.VERSION.SDK_INT;
 import static android.view.KeyEvent.*;
 import static android.view.WindowManager.LayoutParams.*;
-import static com.termux.x11.CmdEntryPoint.ACTION_START;
-import static com.termux.x11.LoriePreferences.ACTION_PREFERENCES_CHANGED;
+import static com.pydroid.x11.CmdEntryPoint.ACTION_START;
+import static com.pydroid.x11.LoriePreferences.ACTION_PREFERENCES_CHANGED;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -59,21 +59,21 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.math.MathUtils;
 import androidx.viewpager.widget.ViewPager;
 
-import com.termux.x11.input.InputEventSender;
-import com.termux.x11.input.InputStub;
-import com.termux.x11.input.TouchInputHandler;
-import com.termux.x11.utils.FullscreenWorkaround;
-import com.termux.x11.utils.KeyInterceptor;
-import com.termux.x11.utils.TermuxX11ExtraKeys;
-import com.termux.x11.utils.X11ToolbarViewPager;
+import com.pydroid.x11.input.InputEventSender;
+import com.pydroid.x11.input.InputStub;
+import com.pydroid.x11.input.TouchInputHandler;
+import com.pydroid.x11.utils.FullscreenWorkaround;
+import com.pydroid.x11.utils.KeyInterceptor;
+import com.pydroid.x11.utils.TermuxX11ExtraKeys;
+import com.pydroid.x11.utils.X11ToolbarViewPager;
 
 import java.util.Map;
 
 @SuppressLint("ApplySharedPref")
 @SuppressWarnings({"deprecation", "unused"})
 public class MainActivity extends AppCompatActivity {
-    public static final String ACTION_STOP = "com.termux.x11.ACTION_STOP";
-    public static final String ACTION_CUSTOM = "com.termux.x11.ACTION_CUSTOM";
+    public static final String ACTION_STOP = "com.pydroid.x11.ACTION_STOP";
+    public static final String ACTION_CUSTOM = "com.pydroid.x11.ACTION_CUSTOM";
 
     public static Handler handler = new Handler();
     FrameLayout frm;

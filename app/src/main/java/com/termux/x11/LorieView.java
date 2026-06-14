@@ -1,4 +1,4 @@
-package com.termux.x11;
+package com.pydroid.x11;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -51,9 +51,9 @@ import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.core.math.MathUtils;
 
-import com.termux.x11.input.InputStub;
-import com.termux.x11.input.TouchInputHandler;
-import com.termux.x11.utils.SamsungDexUtils;
+import com.pydroid.x11.input.InputStub;
+import com.pydroid.x11.input.TouchInputHandler;
+import com.pydroid.x11.utils.SamsungDexUtils;
 
 import java.util.Set;
 import java.util.concurrent.Executor;

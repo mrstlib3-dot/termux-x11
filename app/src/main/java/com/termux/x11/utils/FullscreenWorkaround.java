@@ -1,4 +1,4 @@
-package com.termux.x11.utils;
+package com.pydroid.x11.utils;
 
 import static android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN;
 
@@ -7,8 +7,8 @@ import android.widget.FrameLayout;
 import android.view.View;
 import android.app.Activity;
 
-import com.termux.x11.MainActivity;
-import com.termux.x11.Prefs;
+import com.pydroid.x11.MainActivity;
+import com.pydroid.x11.Prefs;
 
 public class FullscreenWorkaround {
     // For more information, see https://issuetracker.google.com/issues/36911528

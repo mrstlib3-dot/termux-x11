@@ -1,7 +1,7 @@
-package com.termux.x11.utils;
+package com.pydroid.x11.utils;
 
-import static com.termux.shared.termux.extrakeys.ExtraKeysConstants.PRIMARY_KEY_CODES_FOR_STRINGS;
-import static com.termux.x11.MainActivity.toggleKeyboardVisibility;
+import static com.pydroid.shared.termux.extrakeys.ExtraKeysConstants.PRIMARY_KEY_CODES_FOR_STRINGS;
+import static com.pydroid.x11.MainActivity.toggleKeyboardVisibility;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import android.annotation.SuppressLint;
@@ -19,9 +19,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.termux.shared.termux.extrakeys.*;
-import com.termux.x11.LoriePreferences;
-import com.termux.x11.MainActivity;
+import com.pydroid.shared.termux.extrakeys.*;
+import com.pydroid.x11.LoriePreferences;
+import com.pydroid.x11.MainActivity;
 
 import org.json.JSONException;
 
@@ -50,7 +50,7 @@ public class TermuxX11ExtraKeys implements ExtraKeysView.IExtraKeysView {
     }
 
     private final KeyCharacterMap mVirtualKeyboardKeyCharacterMap = KeyCharacterMap.load(KeyCharacterMap.VIRTUAL_KEYBOARD);
-    static final String ACTION_START_PREFERENCES_ACTIVITY = "com.termux.x11.start_preferences_activity";
+    static final String ACTION_START_PREFERENCES_ACTIVITY = "com.pydroid.x11.start_preferences_activity";
 
     @Override
     public void onExtraKeyButtonClick(View view, ExtraKeyButton buttonInfo, Button button) {
