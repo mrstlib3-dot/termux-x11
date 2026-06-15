@@ -22,7 +22,7 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-
+import com.pydroid.x11.R;
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
