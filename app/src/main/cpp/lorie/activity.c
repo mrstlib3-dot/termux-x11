@@ -429,6 +429,6 @@ static void* stderrToLogcatThread(__unused void* cookie) {
 extern char* __progname;
 __attribute__((constructor)) static void init(void) {
     pthread_t t;
-    if (!strcmp(__progname, "com.termux.x11"))
+    if (!strcmp(__progname, "com.pydroid.x11"))
         pthread_create(&t, NULL, stderrToLogcatThread, NULL);
 }
