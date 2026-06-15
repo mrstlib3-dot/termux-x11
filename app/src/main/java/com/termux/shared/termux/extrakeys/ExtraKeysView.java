@@ -36,7 +36,7 @@ import android.widget.PopupWindow;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.termux.x11.R;
+import com.pydroid.x11.R;
 import com.termux.x11.utils.TermuxX11ExtraKeys;
 
 /**

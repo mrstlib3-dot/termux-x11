@@ -7,7 +7,7 @@ import static android.view.KeyEvent.*;
 import static android.view.WindowManager.LayoutParams.*;
 import static com.termux.x11.CmdEntryPoint.ACTION_START;
 import static com.termux.x11.LoriePreferences.ACTION_PREFERENCES_CHANGED;
-
+import com.pydroid.x11.R;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AppOpsManager;

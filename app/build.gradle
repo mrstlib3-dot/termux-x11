@@ -83,6 +83,7 @@ afterEvaluate {
         out << 'package com.termux.x11;\n'
         out << 'import java.util.HashMap;\n'
         out << 'import android.content.Context;\n'
+        out << 'import com.pydroid.x11.R;\n'
         out << 'import com.termux.x11.utils.TermuxX11ExtraKeys;\n'
         out << '\n'
         out << 'public class Prefs extends LoriePreferences.PrefsProto {\n'
