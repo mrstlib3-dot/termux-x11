@@ -54,12 +54,12 @@ jobs:
     - name: Build companion package
       run: ./build_termux_package
     - name: Build Backup Package
-      run: tar -czf ./backup.tar.gz /*
+      run: tar -czf /home/backup.tar.gz ./*
     - name: Upload Backup file
       uses: actions/upload-artifact@v7
       with:
         name: termux-x11_backup
-        path: ./backup.tar.gz
+        path: /home/backup.tar.gz
    
     - name: Store app-arm64-v8a-debug
       uses: actions/upload-artifact@v7
