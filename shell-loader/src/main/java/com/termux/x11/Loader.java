@@ -1,4 +1,4 @@
-package com.termux.x11;
+package com.pydroid.x11;
 import com.pydroid.x11.shell_loader.BuildConfig;
 
 public class Loader {
