@@ -70,7 +70,7 @@ static Bool detectTracer(void)
 }
 
 JNIEXPORT jboolean JNICALL
-Java_com_pydroid_x11_CmdEntryPoint_start(JNIEnv *env, __unused jclass cls, jobjectArray args) {
+Java_com_termux_x11_CmdEntryPoint_start(JNIEnv *env, __unused jclass cls, jobjectArray args) {
     pthread_t t;
     JavaVM* vm = NULL;
     // execv's argv array is a bit incompatible with Java's String[], so we do some converting here...
@@ -484,7 +484,7 @@ void DDXNotifyFocusChanged(void) {
 }
 
 JNIEXPORT jobject JNICALL
-Java_com_pydroid_x11_CmdEntryPoint_getXConnection(JNIEnv *env, __unused jobject cls) {
+Java_com_termux_x11_CmdEntryPoint_getXConnection(JNIEnv *env, __unused jobject cls) {
     int client[2];
     jclass ParcelFileDescriptorClass = (*env)->FindClass(env, "android/os/ParcelFileDescriptor");
     jmethodID adoptFd = (*env)->GetStaticMethodID(env, ParcelFileDescriptorClass, "adoptFd", "(I)Landroid/os/ParcelFileDescriptor;");
@@ -505,7 +505,7 @@ void* logcatThread(void *arg) {
 }
 
 JNIEXPORT jobject JNICALL
-Java_com_pydroid_x11_CmdEntryPoint_getLogcatOutput(JNIEnv *env, __unused jobject cls) {
+Java_com_termux_x11_CmdEntryPoint_getLogcatOutput(JNIEnv *env, __unused jobject cls) {
     jclass ParcelFileDescriptorClass = (*env)->FindClass(env, "android/os/ParcelFileDescriptor");
     jmethodID adoptFd = (*env)->GetStaticMethodID(env, ParcelFileDescriptorClass, "adoptFd", "(I)Landroid/os/ParcelFileDescriptor;");
     const char *debug = getenv("TERMUX_X11_DEBUG");
@@ -521,12 +521,12 @@ Java_com_pydroid_x11_CmdEntryPoint_getLogcatOutput(JNIEnv *env, __unused jobject
 }
 
 JNIEXPORT jboolean JNICALL
-Java_com_pydroid_x11_CmdEntryPoint_connected(__unused JNIEnv *env, __unused jclass clazz) {
+Java_com_termux_x11_CmdEntryPoint_connected(__unused JNIEnv *env, __unused jclass clazz) {
     return conn_fd != -1;
 }
 
 JNIEXPORT void JNICALL
-Java_com_pydroid_x11_CmdEntryPoint_listenForConnections(JNIEnv *env, jobject thiz) {
+Java_com_termux_x11_CmdEntryPoint_listenForConnections(JNIEnv *env, jobject thiz) {
     int server_fd, client, count;
     struct sockaddr_in address = { .sin_family = AF_INET, .sin_addr = { .s_addr = INADDR_ANY }, .sin_port = htons(PORT) };
     int addrlen = sizeof(address);

@@ -3,17 +3,17 @@
 -dontobfuscate
 
 # Keep classes/members referenced from JNI (FindClass/GetMethodID/RegisterNatives) + main entrypoint
--keep class com.pydroid.x11.LorieView {
+-keep class com.termux.x11.LorieView {
     native <methods>;
     void resetIme();
 }
 
--keep class com.pydroid.x11.MainActivity {
-    public static com.pydroid.x11.MainActivity getInstance();
+-keep class com.termux.x11.MainActivity {
+    public static com.termux.x11.MainActivity getInstance();
     void clientConnectedStateChanged();
 }
 
--keep class com.pydroid.x11.CmdEntryPoint {
+-keep class com.termux.x11.CmdEntryPoint {
     public static void main(java.lang.String[]);
 }
 
