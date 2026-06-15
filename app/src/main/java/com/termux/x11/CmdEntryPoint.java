@@ -2,7 +2,7 @@ package com.termux.x11;
 
 import static android.system.Os.getuid;
 import static android.system.Os.getenv;
-
+import com.pydroid.x11.BuildConfig;
 import android.annotation.SuppressLint;
 import android.app.IActivityManager;
 import android.app.PendingIntent;
