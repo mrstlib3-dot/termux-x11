@@ -451,7 +451,7 @@ public class LoriePreferences extends AppCompatActivity implements PreferenceFra
             requireContext().sendBroadcast(new Intent(ACTION_PREFERENCES_CHANGED) {{
                 putExtra("key", key);
                 putExtra("fromBroadcast", true);
-                setPackage("com.termux.x11");
+                setPackage("com.pydroid.x11");
             }});
 
             return true;
